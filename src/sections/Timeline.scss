@@ -1,0 +1,258 @@
+.timeline {
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    padding-bottom: 3rem;
+    // outline: 1px solid black;
+    $easing: cubic-bezier(0.1, 0.25, 0.19, 1.13);
+
+    .wrapper {
+        // background: red;
+        width: 100vw;
+        max-width: 900px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--sbg);
+
+            span {
+                color: var(--color1);
+            }
+
+            margin-bottom: 2rem;
+        }
+
+        .tbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            .line {
+                width: 2px;
+                height: 10rem;
+                border-radius: 10px;
+                background: var(--sbg);
+
+                transform: scaleY(0%);
+                transform-origin: top;
+                transition: transform 700ms 150ms ease;
+            }
+
+            .line.reveal {
+                transform: scaleY(100%);
+            }
+
+            .felem {
+                font-size: 1rem;
+                background: var(--bg);
+                color: var(--color1);
+                font-weight: 700;
+            }
+        }
+
+        .dbox.born {
+            $currColor: var(--color1);
+        }
+
+        .dbox.school {
+            $currColor: var(--color2)
+        }
+        
+        .dbox.college {
+            $currColor: var(--color3)
+        }
+
+        .dbox.work {
+            $currColor: var(--color4)
+        }
+
+        .dbox {
+            $currColor: var(--color1);
+            height: 5rem;
+            // background: springgreen;
+            display: grid;
+            grid-template-columns: 1fr 4.2rem 1fr;
+            justify-content: space-around;
+            align-items: center;
+
+            
+
+            .sbox.info {
+                font-size: .95rem;
+                font-weight: 600;
+                letter-spacing: .3px;
+
+                &.left {
+                    margin-right: 2rem;
+                    text-align: right;
+                }
+
+                &.right {
+                    margin-left: 2rem;
+                    text-align: left;
+                }
+            }
+
+            .sbox.ico {
+                outline: 3px solid $currColor;
+                aspect-ratio: 1 / 1;
+                border-radius: 100px;
+                background: var(--bg);
+                display: grid;
+                place-content: center;
+
+                transform: scale(0);
+                transition: transform 400ms $easing;
+
+                img {
+                    transform: scale(0);
+                    transition: transform 400ms 200ms $easing;
+                    width: 2.1rem;
+                }
+            }
+
+            .sbox.pill {
+                background: $currColor;
+                width: min-content;
+                border-radius: 100px;
+                font-weight: 500;
+                font-size: .9rem;
+                letter-spacing: 1px;
+                color: white;
+                z-index: -1;
+
+                &.nonbg {
+                    background: var(--bg);
+                    color: $currColor;
+                    font-weight: 700;
+                }
+
+                &.right {
+                    padding: .6rem 1rem;
+                    padding-left: 3.5rem;
+                    transform: translateX(-2rem);
+                }
+
+                &.left {
+                    justify-self: flex-end;
+                    padding: .6rem 1rem;
+                    padding-right: 3.5rem;
+                    transform: translateX(2rem);
+                }
+            }
+
+            .sbox.left {
+                transform-origin: right;
+                transform: translateX(6rem);
+                transition: transform 400ms $easing, opacity 400ms $easing;
+            }
+
+            .sbox.right {
+                transform-origin: left;
+                transform: translateX(-6rem);
+                transition: transform 400ms $easing, opacity 400ms $easing;
+            }
+
+            .sbox.pill.right {
+                transform-origin: left;
+                transform: translateX(-6rem);
+                transition: transform 400ms $easing, opacity 400ms $easing;
+            }
+
+           
+        }
+
+        .dbox.reveal {
+
+
+
+            .sbox.ico {
+                transform: scale(100%);
+
+                img {
+                    transform: scale(100%);
+                }
+            }
+
+            .sbox.left {
+                transform: translateX(0);
+            }
+
+            .sbox.right {
+                transform: translateX(0);
+            }
+
+            .sbox.pill.right {
+                transform: translateX(-2rem);
+            }
+        }
+
+        
+
+        .dbox.born{
+            $currColor: var(--color1);
+            .sbox.ico {
+                outline: 3px solid $currColor;
+            }
+
+            .sbox.pill {
+                background: $currColor;
+                &.nonbg {
+                    background: transparent;
+                    color: $currColor;
+                }
+            }
+        }
+
+        .dbox.school{
+            $currColor: var(--color2);
+            .sbox.ico {
+                outline: 3px solid $currColor;
+            }
+
+            .sbox.pill {
+                background: $currColor;
+                &.nonbg {
+                    background: transparent;
+                    color: $currColor;
+                }
+            }
+        }
+
+        .dbox.college{
+            $currColor: var(--color3);
+            .sbox.ico {
+                outline: 3px solid $currColor;
+            }
+
+            .sbox.pill {
+                background: $currColor;
+                &.nonbg {
+                    background: transparent;
+                    color: $currColor;
+                }
+            }
+        }
+
+        .dbox.work{
+            $currColor: var(--color4);
+            .sbox.ico {
+                outline: 3px solid $currColor;
+            }
+
+            .sbox.pill {
+                background: $currColor;
+                &.nonbg {
+                    background: transparent;
+                    color: $currColor;
+                }
+            }
+        }
+    }
+}

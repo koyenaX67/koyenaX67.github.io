@@ -1,0 +1,128 @@
+.art {
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    // background: red;
+
+    .wrapper {
+        // background: red;
+        width: 100vw;
+        max-width: 900px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .mainCont {
+            display: grid;
+            width: 100%;
+            height: 60rem;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+
+            
+
+            .art.first {
+                grid-column: 1 / span 4;
+                grid-row: 1 / span 4;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: 'Arts';
+                    inset: 0;
+                    background: linear-gradient(
+                        to right bottom,
+                        rgba(0, 0, 0, 0.502),
+                        rgba(0, 0, 0, 0.025)
+                    );
+                    color: white;
+                    font-weight: 600;
+                    font-size: 2.5rem;
+                    padding: 1rem;
+                    padding-top: .4rem;
+                    letter-spacing: 1px;
+                }
+
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: .6rem;
+                    aspect-ratio: 1 / 1;
+                    background: white;
+                    z-index: 11;
+                    margin: 1rem;
+                    margin-top: 4rem;
+                }
+            }
+
+            .art.second {
+                grid-column: 5 / span all;
+                grid-row: 1 / span 2;
+            }
+
+            .art.third {
+                grid-column: 5 / span all;
+                grid-row: 3 / span 5;
+            }
+
+            .art.info {
+                grid-column: 1 / span 4;
+                grid-row: 5 / span 3;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: flex-start;
+                gap: 1rem;
+
+
+                text-align: right;
+                padding: 2rem;
+                width: calc(100% - 4rem);
+
+                img {
+                    width: 1.8rem;
+                }
+
+                .info {
+                    font-size: .9rem;
+                    line-height: 1.8rem;
+                    letter-spacing: .4px;
+                    font-weight: 500;
+                }
+            }
+
+            .art {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                .artImg {
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    transition: transform 700ms ease;
+                    
+                    
+                }
+
+                &:hover {
+                    .artImg{
+                        transform: scale(1.10);
+                    }
+                }
+                
+            }
+
+            
+        }
+    }
+}

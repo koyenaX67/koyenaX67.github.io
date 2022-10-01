@@ -1,0 +1,63 @@
+@media (min-width: 790px) {
+
+section.hero.reveal {
+    opacity: 1;
+    transform: translateY(0);
+
+    .side-label .line {
+        transform: scaleY(1) scaleX(1);
+
+    }
+
+
+    .hero-content {
+        .hero_title, .page, .hero_image {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero_panel {
+            opacity: 1;
+            transform: translate(2rem, 2rem);
+
+
+            .lcont {
+                .contacts {
+                    a:nth-child(1), 
+                    a:nth-child(2), 
+                    a:nth-child(3), 
+                    a:nth-child(4) {
+                        transform: translateY(0);
+                        opacity: 1;
+                        
+                        img {
+                            transition: transform 400ms ease;
+                        }
+
+                        img:hover {
+                            transform: translateY(-.4rem);
+                        }
+                    }
+                    
+                }
+
+            }
+        }
+
+        .page {
+            .pill:nth-child(1) {
+                width: 40%;  
+            }
+    
+            .pill:nth-child(2) {
+                width: 15%;
+            }
+
+            .pill:nth-child(3) {
+                width: 60%;
+            }
+        }
+    }
+}
+
+}

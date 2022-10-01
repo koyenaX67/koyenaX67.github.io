@@ -1,0 +1,289 @@
+@keyframes ghost {
+
+    50%{
+        mix-blend-mode: hard-light;
+        filter: brightness(1);
+    }
+
+    51%{
+        mix-blend-mode: difference;
+        filter: brightness(4);
+    }
+
+    52%{
+        mix-blend-mode: difference;
+        filter: brightness(4);
+    }
+
+
+
+    57%{
+        mix-blend-mode: difference;
+        filter: brightness(4);
+    }
+
+
+    58% {
+        mix-blend-mode: hard-light;
+        filter: brightness(1);
+    }
+
+    94% {
+        mix-blend-mode: hard-light;
+    }
+
+
+    95%{
+        mix-blend-mode: difference;
+    }
+
+    97%{
+        mix-blend-mode: hard-light;
+    }
+}
+
+
+
+section.hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    background: var(--color1);
+    display: grid;
+    place-content: center;
+
+    opacity: 0;
+    transform: translateY(-10rem);
+    transition: opacity 700ms ease,
+    transform 700ms ease;
+    animation: ghost2 5000ms linear 1;
+}
+
+.side-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+    // margin-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+
+    .line {
+        width: .08rem;
+        height: 100%;
+        background: var(--bg);
+        transition: transform 700ms 100ms;
+        transform: scaleY(0) scaleX(1);
+
+        &:first-child {
+            transform-origin: bottom;
+        }
+
+        &:last-child {
+            transform-origin: top;
+        }
+    }
+
+    .year {
+        transform: rotate(-90deg);
+        font-weight: 600;
+        font-family: 'poppins';
+        color: var(--bg);
+        letter-spacing: 5px;
+    }
+}
+
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: rotate(8deg);
+
+    $easing: cubic-bezier(0.47, 0.14, 0.19, 1.13);
+    $easing: cubic-bezier(0.1, 0.25, 0.19, 1.13);
+    $time: 2000ms;
+
+    .hero_image .myImage {
+        aspect-ratio: 1 / 1;
+        width: 30vw;
+        min-width: 10rem;
+        max-width: 22rem;
+        border-radius: 10px;
+        transform: translate(3rem, -2.5rem);
+        z-index: -1;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        // background-blend-mode: overlay;
+        overflow: hidden;
+        animation: heroImageMotion 10000ms 5000ms ease infinite;
+        
+        
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: var(--color1);
+            mix-blend-mode: hard-light;
+            animation: ghost 5000ms linear 1;
+        }
+    }
+
+    .hero_image {
+        opacity: 0;
+        transform: translateY(-30rem);
+        transition: transform $time 100ms $easing, opacity 400ms ease;
+    }
+
+    .hero_title {
+        position: absolute;
+        width: 15vw;
+        min-width: 7rem;
+        max-width: 13rem;
+        bottom: -1rem;
+        left: 10%;
+
+        opacity: 0;
+        transform: translateY(-30rem);
+        transition: transform $time 300ms $easing, opacity 400ms ease;
+        // animation: heroTextMotion 10000ms ease infinite;
+    }
+
+    .page {
+        aspect-ratio: 1 / 1;
+        width: 30vw;
+        min-width: 10rem;
+        max-width: 22rem;
+        background: var(--bg);
+        border-radius: 10px;
+        box-shadow: 1rem 1.5rem 2px #021b2d75;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        z-index: 1;
+
+        opacity: 0;
+        transform: translateY(-30rem);
+        transition: transform $time 100ms $easing, opacity 400ms ease;
+
+        .pill {
+            height: 1.2rem;
+            border-radius: 2rem;
+            background: var(--semi-color1);
+            
+            &:nth-child(1) {
+                width: 0%;
+                transition: width 800ms 700ms ease;
+            }
+
+            &:nth-child(2) {
+                width: 0%;
+                transition: width 1500ms 800ms ease;
+            }
+
+            &:nth-child(3) {
+                width: 0%;
+                transition: width 1100ms 500ms ease;
+            }
+        }
+    }
+
+    .hero_panel {
+        position: absolute;
+        width: 40vw;
+        min-width: 20rem;
+        max-width: 28rem;
+        height: 8rem;
+        border-radius: 10px;
+        background: var(--semi-transparent);
+        z-index: 11;
+        backdrop-filter: blur(10px);
+        right: 0;
+        bottom: -2rem;
+        transform: translate(2rem, 2rem);
+        box-shadow: 8.5034px 8.5034px 14.0136px rgba(0, 0, 0, 0.17);
+
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        opacity: 0;
+        transform: translate(2rem, -28rem);
+        transition: transform $time 200ms $easing, opacity 400ms ease;
+
+        .lcont {
+            display: flex;
+            flex-direction: column;
+
+            .myname {
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+
+            .mysinfo {
+                font-weight: 300;
+                line-height: 1rem;
+
+                span {
+                    font-weight: 800;
+                }
+            }
+
+            .contacts {
+                display: flex;
+                gap: 1rem;
+                margin-top: .8rem;
+
+
+                a img {
+                    width: 2rem;
+                }
+
+                a {
+                    opacity: 0;
+                    transform: translateY(-1rem);
+
+                    $duration: 500ms;
+                    $delay: 500ms;
+
+
+                    &:nth-child(1) {
+                        transition: transform $duration $delay+100ms, opacity $duration $delay+100ms;
+                    }
+                    &:nth-child(2) {
+                        transition: transform $duration $delay+200ms, opacity $duration $delay+200ms;
+                    }
+                    &:nth-child(3) {
+                        transition: transform $duration $delay+300ms, opacity $duration $delay+300ms;
+                    }
+                    &:nth-child(4) {
+                        transition: transform $duration $delay+400ms, opacity $duration $delay+400ms;
+                    }
+                }
+            }
+        }
+
+        .rcont {
+            display: grid;
+            place-content: center;
+            padding-right: .5rem;
+            img {
+                width: 4rem;
+                cursor: pointer;
+
+                &:hover {
+                    filter: brightness(.8);
+                }
+            }
+        }
+    }
+}
