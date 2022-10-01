@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.0c60c1d8.css",
+    "main.css": "/static/css/main.67478205.css",
     "main.js": "/static/js/main.230765e5.js",
     "static/media/1.png": "/static/media/1.b3783915ae06050cbb95.png",
     "static/media/3.png": "/static/media/3.08a21c5be3e3b7492a61.png",
@@ -19,11 +19,11 @@
     "static/media/college.svg": "/static/media/college.7708d869180da81a1ad038741b2e75e4.svg",
     "static/media/polygon.svg": "/static/media/polygon.7e99910d34944a383b1c2dcc762b59e1.svg",
     "static/media/slash.svg": "/static/media/slash.b1aa6edf718dad4c12d5bbbefb22677d.svg",
-    "main.0c60c1d8.css.map": "/static/css/main.0c60c1d8.css.map",
+    "main.67478205.css.map": "/static/css/main.67478205.css.map",
     "main.230765e5.js.map": "/static/js/main.230765e5.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c60c1d8.css",
+    "static/css/main.67478205.css",
     "static/js/main.230765e5.js"
   ]
 }
