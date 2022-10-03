@@ -1,5 +1,6 @@
 import React from "react";
 import "./Art.scss";
+import "./ArtResponsive.scss";
 import art1 from "../res/arts/1.png";
 import art2 from "../res/arts/2.png";
 import art3 from "../res/arts/3.png";

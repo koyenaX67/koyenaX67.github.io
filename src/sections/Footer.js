@@ -30,7 +30,7 @@ export default function Footer() {
             <img src={githubIco} alt="Github" />
           </a>
         </div>
-        <div className="siteinfo">Made with ❤ by somone</div>
+        <div className="siteinfo">Made with ❤ by someone</div>
       </div>
     </footer>
   );

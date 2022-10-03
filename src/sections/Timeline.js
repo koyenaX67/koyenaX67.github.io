@@ -7,7 +7,7 @@ import college from "../res/icon/college.svg";
 import work from "../res/icon/job.svg";
 import useOnScreen from "../hooks/intersecting";
 
-export default function Timeline() {
+export default function Timeline({ showSchool, showCollege, showWorkplace }) {
   const bornBox = useRef();
   const bornLine = useRef();
   const schoolBox = useRef();
@@ -50,6 +50,7 @@ export default function Timeline() {
           ></div>
 
           <div
+            onClick={() => showSchool(true)}
             ref={schoolBox}
             className={`dbox school ${is_schoolBoxVisible ? "reveal" : ""}`}
           >
@@ -68,6 +69,7 @@ export default function Timeline() {
           ></div>
 
           <div
+            onClick={() => showCollege(true)}
             ref={instituteBox}
             className={`dbox college ${is_instituteBoxVisible ? "reveal" : ""}`}
           >
@@ -86,6 +88,7 @@ export default function Timeline() {
           ></div>
 
           <div
+            onClick={() => showWorkplace(true)}
             ref={jobBox}
             className={`dbox work ${is_jobBoxVisible ? "reveal" : ""}`}
           >

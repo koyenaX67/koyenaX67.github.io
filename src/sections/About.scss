@@ -20,7 +20,7 @@
         opacity: 0;
         z-index: 11;
 
-        transition: transform 400ms ease;
+        transition: transform 400ms ease, opacity 400ms ease;
     }
 
     .infoCont {

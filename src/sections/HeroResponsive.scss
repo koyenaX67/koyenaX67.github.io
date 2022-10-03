@@ -29,20 +29,12 @@
                 .mysinfo {
                     line-height: 1.6rem;
                 }
-            }
-        }
 
-        .hero_panel {
-
-            .lcont {
                 .contacts {
                     a:nth-child(1), 
                     a:nth-child(2), 
                     a:nth-child(3), 
                     a:nth-child(4) {
-                        transform: translateY(0);
-                        opacity: 1;
-                        
                         img {
                             transition: transform 400ms ease;
                         }
@@ -51,9 +43,30 @@
                             transform: translateY(-.4rem);
                         }
                     }
+
+                    a {
+                        opacity: 0;
+                        transform: translateY(-1rem);
+    
+                        $duration: 500ms;
+                        $delay: 500ms;
+    
+    
+                        &:nth-child(1) {
+                            transition: transform $duration $delay+100ms, opacity $duration $delay+100ms;
+                        }
+                        &:nth-child(2) {
+                            transition: transform $duration $delay+200ms, opacity $duration $delay+200ms;
+                        }
+                        &:nth-child(3) {
+                            transition: transform $duration $delay+300ms, opacity $duration $delay+300ms;
+                        }
+                        &:nth-child(4) {
+                            transition: transform $duration $delay+400ms, opacity $duration $delay+400ms;
+                        }
+                    }
                     
                 }
-
             }
         }
     }
@@ -161,6 +174,8 @@
                 .mysinfo {
                     line-height: 1.6rem;
                 }
+
+                
             }
 
             .rcont {
@@ -202,24 +217,22 @@
     
                 .lcont {
                     .contacts {
-                        a:nth-child(1) {
-                            transform: translateY(0);
-                            opacity: 1;
-                        }
-                        a:nth-child(2) {
-                            transform: translateY(0);
-                            opacity: 1;
-                        }
-                        a:nth-child(3) {
-                            transform: translateY(0);
-                            opacity: 1;
-                        }
+                        a:nth-child(1), 
+                        a:nth-child(2), 
+                        a:nth-child(3), 
                         a:nth-child(4) {
                             transform: translateY(0);
                             opacity: 1;
+                            
+                            img {
+                                transition: transform 400ms ease;
+                            }
+    
+                            img:hover {
+                                transform: translateY(-.4rem);
+                            }
                         }
                     }
-    
                 }
             }
     
