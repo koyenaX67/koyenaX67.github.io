@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.685533bc.css",
-    "main.js": "/static/js/main.bd557b0a.js",
+    "main.css": "/static/css/main.d37c1724.css",
+    "main.js": "/static/js/main.dfaa881b.js",
     "static/media/1.png": "/static/media/1.b3783915ae06050cbb95.png",
     "static/media/3.png": "/static/media/3.08a21c5be3e3b7492a61.png",
     "static/media/heroIMG.png": "/static/media/heroIMG.51cbcff23a91a55ce76b.png",
@@ -10,23 +10,24 @@
     "static/media/about.png": "/static/media/about.d670a1b4f46337b9d46d.png",
     "static/media/cts.jpg": "/static/media/cts.6de9832e0fd3d4901c1a.jpg",
     "static/media/school.png": "/static/media/school.ef4033c129721a7d180a.png",
-    "static/media/instagram.svg": "/static/media/instagram.70d20539b926fa7fed36842ba34e99b6.svg",
-    "static/media/discord.svg": "/static/media/discord.00c4d183c3c7c281bd80e78dd8f36579.svg",
-    "static/media/logo.svg": "/static/media/logo.370738e9adf406105c70a19aed0c98b0.svg",
-    "static/media/born.svg": "/static/media/born.7d5fe9d4ae7d5f63877b916cd2efb5f5.svg",
-    "static/media/github.svg": "/static/media/github.5c5f9da90d49d06ebbe7a416e9f2b7a1.svg",
+    "static/media/instagram.svg": "/static/media/instagram.61d1128c7ca6a196814479f5bdd78b0f.svg",
+    "static/media/discord.svg": "/static/media/discord.6798762e043cb0013d53471efef29581.svg",
+    "static/media/logo.svg": "/static/media/logo.a5c2555b2a043cb7a8b6fbcee619cce4.svg",
+    "static/media/born.svg": "/static/media/born.24ad5b1d2d32bb9ac5739ecea90b8177.svg",
+    "static/media/github.svg": "/static/media/github.1a011eac6fe837e05005272e74d3ad4a.svg",
     "index.html": "/index.html",
-    "static/media/facebook.svg": "/static/media/facebook.fc80ce002e784befe21cf77efca54ffe.svg",
-    "static/media/school.svg": "/static/media/school.9b9a33c2584dfb99546cd9e42a0ae7fa.svg",
-    "static/media/job.svg": "/static/media/job.fdae354dc329e244761f9ad3f06f2026.svg",
-    "static/media/college.svg": "/static/media/college.7708d869180da81a1ad038741b2e75e4.svg",
-    "static/media/polygon.svg": "/static/media/polygon.7e99910d34944a383b1c2dcc762b59e1.svg",
-    "static/media/slash.svg": "/static/media/slash.b1aa6edf718dad4c12d5bbbefb22677d.svg",
-    "main.685533bc.css.map": "/static/css/main.685533bc.css.map",
-    "main.bd557b0a.js.map": "/static/js/main.bd557b0a.js.map"
+    "static/media/heart.svg": "/static/media/heart.504f80bb417e425e4f32a7d39dcf5778.svg",
+    "static/media/facebook.svg": "/static/media/facebook.c9b4dbdaf1766feeab147e811dee1db3.svg",
+    "static/media/school.svg": "/static/media/school.258b72858ab0f948673201f211157a31.svg",
+    "static/media/job.svg": "/static/media/job.a5ca157335d9d41d603de91e3c1f7c98.svg",
+    "static/media/college.svg": "/static/media/college.2d8e8e66214affc08c97a97b39cc8594.svg",
+    "static/media/polygon.svg": "/static/media/polygon.bbfffd05e83086e504196dc25af78790.svg",
+    "static/media/slash.svg": "/static/media/slash.7e9bbf220670f6ace648acd779bc7ddd.svg",
+    "main.d37c1724.css.map": "/static/css/main.d37c1724.css.map",
+    "main.dfaa881b.js.map": "/static/js/main.dfaa881b.js.map"
   },
   "entrypoints": [
-    "static/css/main.685533bc.css",
-    "static/js/main.bd557b0a.js"
+    "static/css/main.d37c1724.css",
+    "static/js/main.dfaa881b.js"
   ]
 }
