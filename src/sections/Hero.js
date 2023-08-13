@@ -66,7 +66,7 @@ export default function Hero() {
           <div className="lcont">
             <div className="myname">{myName}</div>
             <div className="mysinfo">
-              programer trainee at <span>Cognizant.</span>
+              programer at <span>Cognizant</span>
             </div>
             <div className="contacts">
               <a href="https://discordapp.com/users/epicX#0825">
