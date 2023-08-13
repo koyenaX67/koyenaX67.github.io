@@ -5,6 +5,7 @@ import born from "../res/icon/born.svg";
 import school from "../res/icon/school.svg";
 import college from "../res/icon/college.svg";
 import work from "../res/icon/job.svg";
+import heart from "../res/icon/heart.svg";
 import useOnScreen from "../hooks/intersecting";
 
 export default function Timeline({ showSchool, showCollege, showWorkplace }) {
@@ -15,6 +16,8 @@ export default function Timeline({ showSchool, showCollege, showWorkplace }) {
   const instituteBox = useRef();
   const instituteLine = useRef();
   const jobBox = useRef();
+  const loveBox = useRef();
+  const loveLine = useRef();
 
   const is_bornBoxVisible = useOnScreen(bornBox);
   const is_bornLineVisible = useOnScreen(bornLine);
@@ -23,6 +26,8 @@ export default function Timeline({ showSchool, showCollege, showWorkplace }) {
   const is_instituteBoxVisible = useOnScreen(instituteBox);
   const is_instituteLineVisible = useOnScreen(instituteLine);
   const is_jobBoxVisible = useOnScreen(jobBox);
+  const is_loveBoxVisible = useOnScreen(loveBox);
+  const is_loveLineVisible = useOnScreen(loveLine);
 
   return (
     <section className="timeline">
@@ -98,6 +103,26 @@ export default function Timeline({ showSchool, showCollege, showWorkplace }) {
               <img src={work} alt="born" />
             </div>
             <div className="sbox pill nonbg right">2022</div>
+          </div>
+
+          <div
+            ref={loveLine}
+            className={`line ${is_loveLineVisible ? "reveal" : ""}`}
+          ></div>
+
+          <div
+            onClick={() => {}}
+            ref={loveBox}
+            className={`dbox love ${is_loveBoxVisible ? "reveal" : ""}`}
+          >
+            <div className="sbox pill left">2023</div>
+            <div className={`sbox ico`}>
+              <img src={heart} alt="heart" />
+            </div>
+            <div className="sbox info right">
+              In a Relationship
+            </div>
+           
           </div>
         </div>
       </div>

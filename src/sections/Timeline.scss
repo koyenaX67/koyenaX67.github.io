@@ -72,6 +72,10 @@
             $currColor: var(--color4)
         }
 
+        .dbox.love {
+            $currColor: var(--color5)
+        }
+
         .dbox {
             cursor: pointer;
             $currColor: var(--color1);
@@ -146,6 +150,10 @@
                     padding-right: 3.5rem;
                     transform: translateX(2rem);
                 }
+
+                &:not(.nonbg).left {
+                    transform: translateX(4rem);
+                }
             }
 
             .sbox.left {
@@ -191,6 +199,10 @@
 
             .sbox.pill.right {
                 transform: translateX(-2rem);
+            }
+
+            .sbox.pill:not(.nonbg).left {
+                transform: translateX(2rem);
             }
         }
 
@@ -243,6 +255,21 @@
 
         .dbox.work{
             $currColor: var(--color4);
+            .sbox.ico {
+                outline: 3px solid $currColor;
+            }
+
+            .sbox.pill {
+                background: $currColor;
+                &.nonbg {
+                    background: transparent;
+                    color: $currColor;
+                }
+            }
+        }
+
+        .dbox.love{
+            $currColor: var(--color5);
             .sbox.ico {
                 outline: 3px solid $currColor;
             }
